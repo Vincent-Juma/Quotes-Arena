@@ -1,0 +1,15 @@
+
+
+    <div class="row">
+      <div class="col-3"> </div>
+      <div class="col-4"></div>
+      <div class="col-5">- <i>{{ quoteParent.author}}</i></div>
+   </div> 
+   <div class="row">
+      <div class="col-4"> </div>
+      <div class="col-4">Submitted by <i>{{ quoteParent.editor }}</i> </div>
+      <div class="col-4">Posted <i>{{ quoteParent.duration|timeCount|number:1.0-1 }} days ago</i></div>
+   </div> 
+  
+
+  <div class="btn btn-danger" (click)= 'quoteDelete(true)'>Delete Quote</div>

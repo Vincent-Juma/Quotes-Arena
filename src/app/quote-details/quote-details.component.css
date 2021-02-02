@@ -1,0 +1,9 @@
+.deleteBtn
+{
+   float:left;
+}
+.deleteBtn:hover
+{
+    cursor: pointer;
+}
+

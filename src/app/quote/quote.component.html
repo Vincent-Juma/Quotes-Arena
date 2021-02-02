@@ -1,0 +1,32 @@
+<div class=" container">
+<div class="row">
+    <div class="col-md-6 col-sm-12">
+              <app-form (addQuote)="addNewQuote($event)"></app-form>
+    </div>
+    <div class="quoteList col-md-6 col-sm-12">
+        <h5 class="text-center">Uploaded Quotes</h5>
+        <hr>
+       
+      {{maxUpvote}} 
+        <div class="quoteSection"  *ngFor='let quote of quotes;let i = index'>
+             <div class="row">
+                <div class="col-3">
+                    <div ><i (click)="upVote(i)" class="fa fa-caret-up text-success" aria-hidden="true"></i></div>
+                    <strong>{{quote.upvotes}}</strong><br>
+                    <strong>{{quote.downvotes}}</strong>
+                    <div><i (click)="downVote(i)" class="fa fa-caret-down text-danger" aria-hidden="true"></i></div>
+                </div>
+                <ng-template>
+                   
+                </ng-template>
+                <div class="col-9"><b ><i class="fa fa-quote-left" aria-hidden="true"></i> {{quote.quoteName}} <i class="fa fa-quote-right" aria-hidden="true"></i></b></div>
+                
+            <app-quote-details [quoteParent]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-details>
+             
+
+        </div>
+       
+    </div>
+</div>
+</div>
+
