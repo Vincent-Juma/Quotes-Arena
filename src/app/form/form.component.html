@@ -1,6 +1,7 @@
 <div class="formContainer container-fluid">
   <h2 class="text-center">New Quote</h2>
   <hr>
+  <img src="https://unsplash.com/photos/nV8K0uguyiw" style="float: inline-start;" alt="unsplash">
   <form (ngSubmit)='submitQuote()' #goalForm='ngForm'>
   <br>
       <div class="form-group" style="color: #000000;">
@@ -10,6 +11,7 @@
           <!-- Testing to see if we get any data -->
           <p [hidden]="quoteName.valid || quoteName.pristine" class="text-danger">Name is required</p>
            {{newQuote.quoteName}}
+
       </div>
       <br>
       <div class="form-group">

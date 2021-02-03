@@ -10,7 +10,9 @@ import { FormsModule } from '@angular/forms';
 import { HighlightQuoteDirective } from './highlight-quote.directive';
 
 @NgModule({
-  declarations: [
+
+  declarations: 
+  [
     AppComponent,
     FormComponent,
     QuoteComponent,
